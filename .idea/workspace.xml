@@ -1,7 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="048062d3-66c0-4e41-aab0-9049dea1eaa8" name="Default Changelist" comment="" />
+    <list default="true" id="048062d3-66c0-4e41-aab0-9049dea1eaa8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cnn-vis.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/actmax_conv2d_1_Vanilla.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/actmax_conv2d_2_Vanilla.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/actmax_conv2d_Vanilla.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/actmax_output_Vanilla.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/gradcam_conv2d_2_None.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/gradcam_conv2d_2_guided.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/gradcam_conv2d_2_relu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/gradcam_output_None.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/gradcam_output_guided.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/gradcam_output_relu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/saliency_conv2d_1_Vanilla.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/saliency_conv2d_1_guided.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/saliency_conv2d_1_relu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/saliency_conv2d_2_Vanilla.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/saliency_conv2d_2_guided.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/saliency_conv2d_2_relu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/saliency_conv2d_Vanilla.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/saliency_conv2d_guided.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/saliency_conv2d_relu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/saliency_output_Vanilla.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/saliency_output_guided.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/saliency_output_relu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/saliency_maps_linux.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/activation_max.py" beforeDir="false" afterPath="$PROJECT_DIR$/activation_max.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grad_cam.py" beforeDir="false" afterPath="$PROJECT_DIR$/grad_cam.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/Actmax_tv_weights.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/saliency_ai.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/saliency_ai1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/saliency_no_ai.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/saliency_no_ai1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saliency_maps.py" beforeDir="false" afterPath="$PROJECT_DIR$/saliency.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,12 +50,21 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1Tv6HpDys89gO2EWS5WigPH4LpC" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -34,7 +78,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.keras">
+  <component name="RunManager" selected="Python.saliency_maps">
     <configuration name="grad_cam" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="CNNAI" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -79,7 +123,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="optimizer" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="CNNAI" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -87,15 +131,15 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/downloads/keras-vis/vis" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/downloads/keras-vis/vis/optimizer.py" />
-      <option name="PARAMETERS" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cnn-vis.py" />
+      <option name="PARAMETERS" value="-f saliency -m data/AI_scenario_32x32_3-Conv2d-x16-f4x4_pad-valid_1-bins_1574324670.h5 -d data/test_data_32x32.pkl -l output -im 40 41 42 43 44 45" />
       <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="EMULATE_TERMINAL" value="true" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
@@ -114,8 +158,8 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/saliency_maps.py" />
-      <option name="PARAMETERS" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/saliency.py" />
+      <option name="PARAMETERS" value="-m data/AI_scenario_32x32_3-Conv2d-x16-f4x4_pad-valid_1-bins_1574324670.h5 -d main.py data/test_data_32x32.pkl -im 0 1 2" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -123,12 +167,42 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="saliency_maps_linux" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="CNNAI" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/saliency_maps_linux.py" />
+      <option name="PARAMETERS" value="-d data/test_data_32x32.pkl -m data/AI_scenario_32x32_3-Conv2d-x16-f4x4_pad-valid_1-bins_1574324670.h5 -im 0 1 2" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.grad_cam" />
+      <item itemvalue="Python.keras" />
+      <item itemvalue="Python.saliency_maps" />
+      <item itemvalue="Python.saliency_maps_linux" />
+      <item itemvalue="Python.main" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.keras" />
         <item itemvalue="Python.saliency_maps" />
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.grad_cam" />
-        <item itemvalue="Python.optimizer" />
+        <item itemvalue="Python.saliency_maps_linux" />
+        <item itemvalue="Python.keras" />
       </list>
     </recent_temporary>
   </component>
@@ -157,14 +231,38 @@
       <workItem from="1576151859244" duration="1002000" />
       <workItem from="1576153847631" duration="3244000" />
       <workItem from="1576167267992" duration="279000" />
+      <workItem from="1576535950421" duration="3466000" />
+      <workItem from="1576594944349" duration="27000" />
+      <workItem from="1576701861804" duration="12222000" />
+      <workItem from="1576747825830" duration="11929000" />
+      <workItem from="1576760354884" duration="3458000" />
+      <workItem from="1576854644915" duration="3540000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/CNNAI__copia_$keras.coverage" NAME="keras Coverage Results" MODIFIED="1576717124392" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CNNAI__copia_$grad_cam.coverage" NAME="grad_cam Coverage Results" MODIFIED="1576752033442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CNNAI__copia_$main.coverage" NAME="main Coverage Results" MODIFIED="1576756343707" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CNNAI$saliency_maps.coverage" NAME="saliency_maps Coverage Results" MODIFIED="1576150803456" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CNNAI__copia_$saliency_maps_linux.coverage" NAME="saliency_maps_linux Coverage Results" MODIFIED="1576748843664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CNNAI__copia_$saliency_maps.coverage" NAME="saliency_maps Coverage Results" MODIFIED="1576758327886" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CNNAI$keras.coverage" NAME="keras Coverage Results" MODIFIED="1576154036988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CNNAI$optimizer.coverage" NAME="optimizer Coverage Results" MODIFIED="1574964270507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/downloads/keras-vis/vis" />
     <SUITE FILE_PATH="coverage/CNNAI$grad_cam.coverage" NAME="grad_cam Coverage Results" MODIFIED="1576150552988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

@@ -1,5 +1,6 @@
-import sys
+#!/usr/bin/env python
 
+import sys
 sys.path.insert(0,'/home/pabswfly/downloads/keras-vis' )
 
 import numpy as np
@@ -11,6 +12,7 @@ from tensorflow import keras
 from tensorflow.keras.models import load_model
 import pickle
 from mpl_toolkits.axes_grid1 import ImageGrid
+import argparse
 
 
 def visualize_images(images, labels=None):
@@ -34,7 +36,7 @@ def visualize_images(images, labels=None):
     plt.title('Input images')
     grid[0].set_yticks([3, 35, 67])
     grid[0].set_yticklabels(['Neandertal', 'European', 'African'])
-    plt.show()
+    plt.savefig('pictures.png')
 
 
 def swap_function_to_linear(model, layer_name):
@@ -79,52 +81,67 @@ def plot_saliency(model, layer_name, images, backprop_mods = None, grad_mod = 'a
         grid[0].set_yticks([3, 35, 67])
         grid[0].set_yticklabels(['Neandertal', 'European', 'African'])
 
-    plt.show()
+    plt.savefig('saliency.png')
 
 
 
-# opening the data. (1 == adaptive introgression, 0 otherwise)
-with open("test_data_32x32.pkl", "rb") as f:
-     X, Y = pickle.load(f)
 
-# X.shape = (100, 64, 32, 1)
-# Y.shape = (100,)
-
-# Take a look at the weights
-
-#model_file = "AI_scenario_128x128_3-Conv2d-x32-f4x4_pad-valid_1-bins_1573817953.h5"
-model_file = "AI_scenario_32x32_3-Conv2d-x16-f4x4_pad-valid_1-bins_1574324670.h5"
-model = load_model(model_file, custom_objects={"tf": tf}, compile=False)
-
-# See attributes of the model:
-# dir(model)
+if __name__ == "__main__":
 
 
-############# SALIENCY MAPS ##############################
+    parser = argparse.ArgumentParser(description='Application of keras-vis library to visualize Saliency Maps')
+    parser.add_argument('-m', help='.pkl file with the Convolutional Neural Network model to be analized',
+                        required=True, type=str)
+    parser.add_argument('-d', help='.pkl file with labelled images that were used to train the CNN',
+                        required=True, type=str)
+    parser.add_argument('-im', help='Selected images to use for saliency', required=True, nargs='+', type=int)
 
-# Hide warnings on Jupyter Notebook
-import warnings
-warnings.filterwarnings('ignore')
+    args = parser.parse_args()
+    model_file = args.m
+    data_file = args.d
+    indeces = args.im
 
-# I need to swap the last dense layer activation function to a linear one, because
-# the model uses a sigmoid function to predict the binary class. (similar to softmax)
-model = swap_function_to_linear(model, "output")
+    # opening the data. (1 == adaptive introgression, 0 otherwise)
+    with open(data_file, "rb") as f:
+         X, Y = pickle.load(f)
 
-# THE RESULTS ARE THE SAME, WETHER IF I CHANGE THE ACTIVATION FUNCTION OR NOT
-# THERE's NO IMPACT ON FINAL ACTIVATION FUNCTION DUE TO THE FACT THAT IS A BINARY CLASSIFICATION?
+    # X.shape = (100, 64, 32, 1)
+    # Y.shape = (100,)
 
-images = X[0], X[1], X[2]
-labs = Y[0], Y[1], Y[2]
-visualize_images(images)
+    # Take a look at the weights
 
+    model = load_model(model_file, custom_objects={"tf": tf}, compile=False)
 
-plot_saliency(model, 'output', images, backprop_mods=[None, 'guided', 'relu'], labels = labs)
-
-# Repeat with grad_modifier = 'negate'.
-# This tells us what parts of the image contributes negatively to the output.
-# plot_saliency(model, 'output', images, backprop_mods=[None, 'guided', 'relu'], grad_mod= 'negate')
+    # See attributes of the model:
+    # dir(model)
 
 
-# With other layers. For this model - conv2d, conv2d_1, conv2d_2
-layer = 'conv2d_2'
-plot_saliency(model, layer, images, backprop_mods=[None, 'guided', 'relu'], labels = labs)
+    ############# SALIENCY MAPS ##############################
+
+    # Hide warnings on Jupyter Notebook
+    import warnings
+    warnings.filterwarnings('ignore')
+    tf.autograph.set_verbosity(0)
+
+    # I need to swap the last dense layer activation function to a linear one, because
+    # the model uses a sigmoid function to predict the binary class. (similar to softmax)
+    model = swap_function_to_linear(model, "output")
+
+    # THE RESULTS ARE THE SAME, WETHER IF I CHANGE THE ACTIVATION FUNCTION OR NOT
+    # THERE's NO IMPACT ON FINAL ACTIVATION FUNCTION DUE TO THE FACT THAT IS A BINARY CLASSIFICATION?
+
+    images = [X[i] for i in indeces]
+    labs = [Y[i] for i in indeces]
+
+    visualize_images(images)
+
+    plot_saliency(model, 'output', images, backprop_mods=[None, 'guided', 'relu'], labels = labs)
+
+    # Repeat with grad_modifier = 'negate'.
+    # This tells us what parts of the image contributes negatively to the output.
+    # plot_saliency(model, 'output', images, backprop_mods=[None, 'guided', 'relu'], grad_mod= 'negate')
+
+
+    # With other layers. For this model - conv2d, conv2d_1, conv2d_2
+    layer = 'conv2d_2'
+    plot_saliency(model, layer, images, backprop_mods=[None, 'guided', 'relu'], labels = labs)
