@@ -69,41 +69,47 @@ def plot_weights(model, layer_name):
 
         #TODO: Make subplot flexible, not only [4, 4]
         plt.subplot(4, 4, i + 1)
-        plt.imshow(filter)
+        plt.imshow(filter, cmap='Blues')
 
     plt.show()
 
 
-def plot_actmax(model, layer_name, tv_weight=1e-5, backprop_mod=None):
+def plot_actmax(model, tv_weight=1e-5, backprop_mod=None):
     """Function to plot the Activation Maximization map. Inputs:
         - model: CNN model
         - layer_name: Desired layel for plotting
         - backprop_mod: Modifier for backpropagation. 'guided' generally returns the best and sharpest maps
         - tv_weight: Total variance weight loss. Needs to be tuned to get accurate layer filters."""
 
-    # Find index in model for the desired layer
-    layer = utils.find_layer_idx(model, layer_name)
-
     fig = plt.figure(figsize=(16, 8))
-    grid = ImageGrid(fig, 111, nrows_ncols=(1, 6), axes_pad=0.15,
-                 share_all=True, cbar_location="right", cbar_mode="single",
-                 cbar_size="7%", cbar_pad=0.15)
+    grid = ImageGrid(fig, 111, nrows_ncols=(1, 4), axes_pad=0.15, share_all=True)
 
-    # Testing with different total variance weight loss. Will be removed in the future
-    for i, tv_weight in enumerate([1e-6, 8e-5, 6e-5, 4e-5, 2e-5, 1e-5]):
+    i = 0
+
+    # summarize filter shapes
+    for layer in model.layers:
+
+        # check for convolutional layer
+        if 'conv' not in layer.name:
+            if 'output' not in layer.name:
+                if 'dense' not in layer.name:
+                    if 'preds' not in layer.name:
+                        continue
+
+        layer_idx = utils.find_layer_idx(model, layer.name)
 
         # Calculate activation maximization map. Jitter(16) argument results in sharper saliency maps.
-        img = visualize_activation(model, layer, filter_indices=0, backprop_modifier=backprop_mod,
+        img = visualize_activation(model, layer_idx, filter_indices=0, backprop_modifier=backprop_mod,
                                    tv_weight=tv_weight, lp_norm_weight=0., input_modifiers=[Jitter(16)])
 
-        plot = grid[i].imshow(img[..., 0])
+        grid[i].imshow(img[..., 0], cmap='Blues')
 
         # Graphical parameters
-        grid[i].set_title('tv_w: {}'.format(tv_weight))
-        grid[-1].cax.colorbar(plot)
-        plt.suptitle('Activation Maximization layer {}'.format(layer))
+        grid[i].set_title('{}'.format(layer.name))
         grid[0].set_yticks([3, 35, 67])
         grid[0].set_yticklabels(['Neandertal', 'European', 'African'])
+
+        i += 1
 
 
     # If no backpropagation modifier is given, the default one is called Vanilla
@@ -111,8 +117,8 @@ def plot_actmax(model, layer_name, tv_weight=1e-5, backprop_mod=None):
         backprop_mod = 'Vanilla'
 
     # Graphical parameters
-    plt.suptitle('Activation-maximization map for layer {0} with backprop_modifier: {1}'.format(layer_name, backprop_mod))
-    plt.savefig('results/actmax_{0}_{1}.png'.format(layer_name, backprop_mod))
+    plt.suptitle('Activation-maximization map with backprop_modifier: {}'.format(backprop_mod))
+    plt.savefig('results/actmax_{}.png'.format(backprop_mod))
 
 
 

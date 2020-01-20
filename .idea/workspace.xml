@@ -2,40 +2,70 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="048062d3-66c0-4e41-aab0-9049dea1eaa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cnn-vis.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/actmax_conv2d_1_Vanilla.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/actmax_conv2d_2_Vanilla.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/actmax_conv2d_Vanilla.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/actmax_output_Vanilla.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/gradcam_conv2d_2_None.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/gradcam_conv2d_2_guided.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/gradcam_conv2d_2_relu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/gradcam_output_None.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/gradcam_output_guided.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/gradcam_output_relu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/saliency_conv2d_1_Vanilla.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/saliency_conv2d_1_guided.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/saliency_conv2d_1_relu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/saliency_conv2d_2_Vanilla.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/saliency_conv2d_2_guided.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/saliency_conv2d_2_relu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/saliency_conv2d_Vanilla.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/saliency_conv2d_guided.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/saliency_conv2d_relu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/saliency_output_Vanilla.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/saliency_output_guided.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/saliency_output_relu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saliency_maps_linux.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mnist_test" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mnist_test.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mnist_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/actmax_guided_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/gradcam_preds_guided_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/gradcam_preds_guided_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/model_x16/actmax_Vanilla.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/model_x16/actmax_guided.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/model_x16/actmax_guided2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/model_x16/x16_actmax_Vanilla.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/model_x16/x16_actmax_Vanilla1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/model_x16/x16_actmax_guided.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/model_x16/x16_gradcam_conv2d_1_guided.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/model_x16/x16_gradcam_conv2d_2_guided.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/model_x16/x16_gradcam_output_guided.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/model_x16/x16_saliency_conv2d_1_guided.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/model_x16/x16_saliency_conv2d_2_guided.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/model_x16/x16_saliency_conv2d_guided.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/model_x16/x16_saliency_output_guided.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/model_x32/x32_actmax_Vanilla.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/model_x32/x32_actmax_guided.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/model_x32/x32_gradcam_conv2d_1_guided.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/model_x32/x32_gradcam_conv2d_2_guided.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/model_x32/x32_gradcam_output_guided.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/model_x32/x32_saliency_conv2d_1_guided.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/model_x32/x32_saliency_conv2d_2_guided.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/model_x32/x32_saliency_conv2d_guided.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/model_x32/x32_saliency_output_guided.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/model_x8/x8_actmax_Vanilla.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/model_x8/x8_actmax_guided.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/model_x8/x8_gradcam_conv2d_1_guided.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/model_x8/x8_gradcam_conv2d_2_guided.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/model_x8/x8_gradcam_output_guided.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/model_x8/x8_saliency_conv2d_1_guided.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/model_x8/x8_saliency_conv2d_2_guided.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/model_x8/x8_saliency_conv2d_guided.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/model_x8/x8_saliency_output_guided.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/saliency_preds_guided_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/saliency_preds_guided_1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/activation_max.py" beforeDir="false" afterPath="$PROJECT_DIR$/activation_max.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grad_cam.py" beforeDir="false" afterPath="$PROJECT_DIR$/grad_cam.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pictures/Actmax_tv_weights.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pictures/saliency_ai.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pictures/saliency_ai1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pictures/saliency_no_ai.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pictures/saliency_no_ai1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saliency_maps.py" beforeDir="false" afterPath="$PROJECT_DIR$/saliency.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cnn-vis.py" beforeDir="false" afterPath="$PROJECT_DIR$/cnn-vis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/actmax_conv2d_1_Vanilla.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/actmax_conv2d_2_Vanilla.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/actmax_conv2d_Vanilla.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/actmax_output_Vanilla.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/gradcam_conv2d_2_None.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/gradcam_conv2d_2_guided.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/gradcam_conv2d_2_relu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/gradcam_output_None.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/gradcam_output_guided.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/gradcam_output_relu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/saliency_conv2d_1_Vanilla.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/saliency_conv2d_1_guided.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/saliency_conv2d_1_relu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/saliency_conv2d_2_Vanilla.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/saliency_conv2d_2_guided.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/saliency_conv2d_2_relu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/saliency_conv2d_Vanilla.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/saliency_conv2d_guided.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/saliency_conv2d_relu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/saliency_output_Vanilla.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/saliency_output_guided.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/saliency_output_relu.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +84,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1Tv6HpDys89gO2EWS5WigPH4LpC" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
@@ -78,7 +112,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.saliency_maps">
+  <component name="RunManager" selected="Python.main">
     <configuration name="grad_cam" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="CNNAI" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -101,28 +135,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="keras" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="CNNAI" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/activation_max.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="CNNAI" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -137,9 +149,31 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cnn-vis.py" />
-      <option name="PARAMETERS" value="-f saliency -m data/AI_scenario_32x32_3-Conv2d-x16-f4x4_pad-valid_1-bins_1574324670.h5 -d data/test_data_32x32.pkl -l output -im 40 41 42 43 44 45" />
+      <option name="PARAMETERS" value="-f grad-cam -m data/AI_scenario_32x32_3-Conv2d-x8-f4x4_pad-valid_1-bins_1576839022.h5 -d data/test_data_32x32.pkl -l output -im 40 41 42 43 44 45" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="true" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="mnist_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="CNNAI" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mnist_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
@@ -159,7 +193,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/saliency.py" />
-      <option name="PARAMETERS" value="-m data/AI_scenario_32x32_3-Conv2d-x16-f4x4_pad-valid_1-bins_1574324670.h5 -d main.py data/test_data_32x32.pkl -im 0 1 2" />
+      <option name="PARAMETERS" value="-f activation-max -m data/AI_scenario_32x32_3-Conv2d-x16-f4x4_pad-valid_1-bins_1574324670.h5 -d main.py data/test_data_32x32.pkl -im 0 1 2 3 4 -l output" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -191,18 +225,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.grad_cam" />
-      <item itemvalue="Python.keras" />
       <item itemvalue="Python.saliency_maps" />
       <item itemvalue="Python.saliency_maps_linux" />
       <item itemvalue="Python.main" />
+      <item itemvalue="Python.mnist_test" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.saliency_maps" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.mnist_test" />
+        <item itemvalue="Python.saliency_maps" />
         <item itemvalue="Python.grad_cam" />
         <item itemvalue="Python.saliency_maps_linux" />
-        <item itemvalue="Python.keras" />
       </list>
     </recent_temporary>
   </component>
@@ -236,7 +270,19 @@
       <workItem from="1576701861804" duration="12222000" />
       <workItem from="1576747825830" duration="11929000" />
       <workItem from="1576760354884" duration="3458000" />
-      <workItem from="1576854644915" duration="3540000" />
+      <workItem from="1576854644915" duration="5898000" />
+      <workItem from="1577091015412" duration="28000" />
+      <workItem from="1577103897907" duration="2279000" />
+      <workItem from="1578510415404" duration="4257000" />
+      <workItem from="1578515511406" duration="317000" />
+      <workItem from="1578518664557" duration="1208000" />
+      <workItem from="1578520935213" duration="2330000" />
+      <workItem from="1578578263293" duration="3665000" />
+      <workItem from="1578934866252" duration="4304000" />
+      <workItem from="1579174563241" duration="1222000" />
+      <workItem from="1579371830911" duration="6354000" />
+      <workItem from="1579422807996" duration="47000" />
+      <workItem from="1579449143905" duration="2013000" />
     </task>
     <servers />
   </component>
@@ -256,7 +302,11 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/CNNAI$mnist_test.coverage" NAME="mnist_test Coverage Results" MODIFIED="1578579914921" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CNNAI__copia_$keras.coverage" NAME="keras Coverage Results" MODIFIED="1576717124392" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CNNAI__copia_$grad_cam.coverage" NAME="grad_cam Coverage Results" MODIFIED="1576752033442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CNNAI__copia_$main.coverage" NAME="main Coverage Results" MODIFIED="1576756343707" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -266,5 +316,6 @@
     <SUITE FILE_PATH="coverage/CNNAI$keras.coverage" NAME="keras Coverage Results" MODIFIED="1576154036988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CNNAI$optimizer.coverage" NAME="optimizer Coverage Results" MODIFIED="1574964270507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/downloads/keras-vis/vis" />
     <SUITE FILE_PATH="coverage/CNNAI$grad_cam.coverage" NAME="grad_cam Coverage Results" MODIFIED="1576150552988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CNNAI$main.coverage" NAME="main Coverage Results" MODIFIED="1578582360146" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
