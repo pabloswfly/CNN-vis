@@ -2,70 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="048062d3-66c0-4e41-aab0-9049dea1eaa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mnist_test" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mnist_test.h5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mnist_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/actmax_guided_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/gradcam_preds_guided_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/gradcam_preds_guided_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/model_x16/actmax_Vanilla.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/model_x16/actmax_guided.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/model_x16/actmax_guided2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/model_x16/x16_actmax_Vanilla.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/model_x16/x16_actmax_Vanilla1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/model_x16/x16_actmax_guided.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/model_x16/x16_gradcam_conv2d_1_guided.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/model_x16/x16_gradcam_conv2d_2_guided.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/model_x16/x16_gradcam_output_guided.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/model_x16/x16_saliency_conv2d_1_guided.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/model_x16/x16_saliency_conv2d_2_guided.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/model_x16/x16_saliency_conv2d_guided.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/model_x16/x16_saliency_output_guided.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/model_x32/x32_actmax_Vanilla.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/model_x32/x32_actmax_guided.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/model_x32/x32_gradcam_conv2d_1_guided.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/model_x32/x32_gradcam_conv2d_2_guided.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/model_x32/x32_gradcam_output_guided.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/model_x32/x32_saliency_conv2d_1_guided.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/model_x32/x32_saliency_conv2d_2_guided.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/model_x32/x32_saliency_conv2d_guided.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/model_x32/x32_saliency_output_guided.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/model_x8/x8_actmax_Vanilla.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/model_x8/x8_actmax_guided.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/model_x8/x8_gradcam_conv2d_1_guided.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/model_x8/x8_gradcam_conv2d_2_guided.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/model_x8/x8_gradcam_output_guided.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/model_x8/x8_saliency_conv2d_1_guided.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/model_x8/x8_saliency_conv2d_2_guided.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/model_x8/x8_saliency_conv2d_guided.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/model_x8/x8_saliency_output_guided.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/saliency_preds_guided_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/saliency_preds_guided_1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/activation_max.py" beforeDir="false" afterPath="$PROJECT_DIR$/activation_max.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cnn-vis.py" beforeDir="false" afterPath="$PROJECT_DIR$/cnn-vis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/actmax_conv2d_1_Vanilla.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/actmax_conv2d_2_Vanilla.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/actmax_conv2d_Vanilla.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/actmax_output_Vanilla.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/gradcam_conv2d_2_None.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/gradcam_conv2d_2_guided.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/gradcam_conv2d_2_relu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/gradcam_output_None.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/gradcam_output_guided.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/gradcam_output_relu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/saliency_conv2d_1_Vanilla.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/saliency_conv2d_1_guided.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/saliency_conv2d_1_relu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/saliency_conv2d_2_Vanilla.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/saliency_conv2d_2_guided.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/saliency_conv2d_2_relu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/saliency_conv2d_Vanilla.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/saliency_conv2d_guided.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/saliency_conv2d_relu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/saliency_output_Vanilla.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/saliency_output_guided.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/saliency_output_relu.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +29,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MachineLearning" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -282,8 +219,16 @@
       <workItem from="1579174563241" duration="1222000" />
       <workItem from="1579371830911" duration="6354000" />
       <workItem from="1579422807996" duration="47000" />
-      <workItem from="1579449143905" duration="2013000" />
+      <workItem from="1579449143905" duration="2698000" />
     </task>
+    <task id="LOCAL-00001" summary="Code state at time of handing the report">
+      <created>1579534619837</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1579534619837</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,6 +249,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Code state at time of handing the report" />
+    <option name="LAST_COMMIT_MESSAGE" value="Code state at time of handing the report" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CNNAI$mnist_test.coverage" NAME="mnist_test Coverage Results" MODIFIED="1578579914921" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
