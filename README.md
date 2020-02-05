@@ -12,7 +12,7 @@ ConvNet model | model | Path to model file, stored as a .h5 Python format | Yes 
 Data | -d or --data | Path to data containing image matrices X and labels y as a pickle package in .pkl format | No | String
 Layer | -l or --layer | Name of the desired Conv layer in the ConvNet model to visualize | No | String
 Image indeces | -im or --images | Indeces to the selected images for saliency and grad-CAM visualization | No | List of integers
-Backpropagation modifier | -bm or --backprop | Modifier for the backpropagation step | No | String
+Backpropagation modifier | -bm or --backprop | Modifier for the backpropagation step. Choices are: *None (vanilla)*, *guided*, *rectified*, *deconv*, or *relu* | No | String
 
 ## Library requirements:
 Tensorflow 2.0.*
