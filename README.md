@@ -5,14 +5,21 @@ This software was developed for my Bioinformatics project of 7.5 ECTS in the Uni
 
 Manual to run CNN-vis from the console:
 
-Operation | Flag | Comments | Type
------------- | ------------- | ------------- | -------------
-Function | -f | Visualization technique or utility to perform. Choices are: *activation-max*, *saliency*, *grad-cam*, *filter-weights*, *model-summary*, or *get-labels* | String
-ConvNet model | -m | Path to model file, stored as a .h5 Python format | String
-Data | -d | Path to data containing image matrices X and labels y as a pickle package in .pkl format | String
-Layer | -l | Name of the desired Conv layer in the ConvNet model to visualize | String
-Image indeces | -im | Indeces to the selected images for saliency and grad-CAM visualization | List of integers
+Operation | Flag | Comments | Required | Type
+------------ | ------------- | ------------- | -------------  | -------------
+Function | function | Visualization technique or utility to perform. Choices are: *activation-max*, *saliency*, *grad-cam*, *filter-weights*, *model-summary*, or *get-labels* | Yes | String
+ConvNet model | model | Path to model file, stored as a .h5 Python format | Yes | String
+Data | -d or --data | Path to data containing image matrices X and labels y as a pickle package in .pkl format | No | String
+Layer | -l or --layer | Name of the desired Conv layer in the ConvNet model to visualize | No | String
+Image indeces | -im or --images | Indeces to the selected images for saliency and grad-CAM visualization | No | List of integers
+Backpropagation modifier | -bm or --backprop | Modifier for the backpropagation step | No | String
+
+## Library requirements:
+Tensorflow 2.0.*
+Keras-vis 0.4.1
+
 
 ## Example of terminal command to run the code:
-cnn-vis.py -f grad-cam -m data/your_cnn_model.h5 -d data/test_data.pkl -l output -im 0 1 2 5 10 18 19 31 51 72
+python3 cnn-vis.py saliency data/my_model.h5 --data data/my_image_data.pkl --layer output --images 0 3 5 10
+
 
