@@ -88,6 +88,86 @@ def plot_saliency(model, images_withidx, layer_name='output', backprop_mod = 'gu
     plt.savefig('results/saliency_{0}_{1}.png'.format(layer_name, backprop_mod))
 
 
+
+def average_saliency(model, images, labels, layer_name='output', backprop_mod = 'guided', grad_mod = 'absolute'):
+    """Function to plot the average of Saliency Maps for a given class. Inputs:
+            - model: CNN model
+            - images_withidx: A set of images matrix X with the associated index from the original dataset
+            - layer_name: Desired layel for plotting
+            - backprop_mod: Modifier for backpropagation. 'guided' generally returns the best and sharpest maps
+            - grad_mod: Gradient modifier. Ex: 'absolute', 'negate'.
+            - labels: A list of labels y. If given, it is used as title for each of the subfigures plotted"""
+
+    n_im_AI = labels.count('AI')
+    n_im_noAI = labels.count('-')
+    print(n_im_AI)
+    print(n_im_noAI)
+
+    # Find index in model for the desired layer
+    layer = utils.find_layer_idx(model, layer_name)
+
+    AIdict = {}
+    AIdict['AI'] = np.zeros((68,32))
+    AIdict['-'] = np.zeros((68,32))
+
+    counter = 0
+
+    # For each of the input images
+    for im, lab in zip(images, labels):
+
+        counter += 1
+        print(counter)
+
+
+        # Calculates the saliency gradient using keras-vis library.
+        grads = visualize_saliency(model, layer, filter_indices=0, seed_input=im,
+                                   backprop_modifier=backprop_mod, grad_modifier=grad_mod)
+
+        AIdict[lab] = AIdict[lab] + grads
+
+
+
+    # If no backpropagation modifier is given, the default one is called Vanilla
+    if backprop_mod == None:
+        backprop_mod = 'Vanilla'
+
+    # Average calculation
+    AIdict['AI'] = AIdict['AI']/n_im_AI
+    AIdict['-'] = AIdict['-'] / n_im_noAI
+
+    # Difference
+    diff = AIdict['AI'] - AIdict['-']
+
+    fig, ax = plt.subplots(figsize=(6, 7))
+    pic = ax.imshow(diff, cmap='hot', vmin=-0.3, vmax=0.3)
+    ax.set_yticks([3, 35, 67])
+    ax.set_yticklabels(['Neandertal', 'European', 'African'])
+    fig.colorbar(pic)
+    fig.suptitle('Difference of average saliency maps for AI and no-AI class')
+    plt.savefig('results/difference_AI.png'.format(layer_name, backprop_mod))
+    plt.clf()
+
+
+    # Now switch to a more OO interface to exercise more features.
+    fig, axs = plt.subplots(nrows=1, ncols=2, sharex=True)
+
+    # Graphical parameters
+    ax = axs[0]
+    ax.imshow(AIdict['AI'], cmap='hot', vmin=0., vmax=0.4)
+    ax.set_title('AI (%d ims)' % n_im_AI)
+    ax.set_yticks([3, 35, 67])
+    ax.set_yticklabels(['Neandertal', 'European', 'African'])
+
+    ax = axs[1]
+    pic = ax.imshow(AIdict['-'], cmap='hot', vmin=0., vmax=0.4)
+    ax.set_title('no-AI (%d ims)' % n_im_noAI)
+
+    fig.colorbar(pic, ax=ax)
+    fig.suptitle('Average of Saliency maps for layer {0} with backprop_modifier: {1}'.format(layer_name, backprop_mod))
+    plt.savefig('results/average_saliency_{0}_{1}.png'.format(layer_name, backprop_mod))
+
+
+
 def test(model, X, Y):
     """Chunk of code used for testing and debugging. Please ignore."""
 

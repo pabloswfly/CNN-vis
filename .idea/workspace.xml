@@ -2,7 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="048062d3-66c0-4e41-aab0-9049dea1eaa8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/results/actmax_guided.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/average_gradcam_output_guided.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/average_saliency_output_guided100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/average_saliency_output_guided16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/average_saliency_output_guided32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/average_saliency_output_guided50.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/difference_AI.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/difference_AI32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/gradcam_output_guided.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cnn-vis.py" beforeDir="false" afterPath="$PROJECT_DIR$/cnn-vis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grad_cam.py" beforeDir="false" afterPath="$PROJECT_DIR$/grad_cam.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saliency.py" beforeDir="false" afterPath="$PROJECT_DIR$/saliency.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +61,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.saliency_maps">
     <configuration name="grad_cam" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="CNNAI" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -169,9 +181,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.saliency_maps" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.mnist_test" />
-        <item itemvalue="Python.saliency_maps" />
         <item itemvalue="Python.grad_cam" />
         <item itemvalue="Python.saliency_maps_linux" />
       </list>
@@ -220,6 +232,13 @@
       <workItem from="1579371830911" duration="6354000" />
       <workItem from="1579422807996" duration="47000" />
       <workItem from="1579449143905" duration="2698000" />
+      <workItem from="1580303407944" duration="4705000" />
+      <workItem from="1580309652651" duration="1386000" />
+      <workItem from="1580728167411" duration="604000" />
+      <workItem from="1580735202295" duration="1533000" />
+      <workItem from="1580809359696" duration="1469000" />
+      <workItem from="1580811731365" duration="6040000" />
+      <workItem from="1580893528176" duration="5337000" />
     </task>
     <task id="LOCAL-00001" summary="Code state at time of handing the report">
       <created>1579534619837</created>
@@ -257,12 +276,12 @@
     <SUITE FILE_PATH="coverage/CNNAI__copia_$keras.coverage" NAME="keras Coverage Results" MODIFIED="1576717124392" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CNNAI__copia_$grad_cam.coverage" NAME="grad_cam Coverage Results" MODIFIED="1576752033442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CNNAI__copia_$main.coverage" NAME="main Coverage Results" MODIFIED="1576756343707" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/CNNAI$saliency_maps.coverage" NAME="saliency_maps Coverage Results" MODIFIED="1576150803456" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CNNAI$saliency_maps.coverage" NAME="saliency_maps Coverage Results" MODIFIED="1580812306100" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CNNAI__copia_$saliency_maps_linux.coverage" NAME="saliency_maps_linux Coverage Results" MODIFIED="1576748843664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CNNAI__copia_$saliency_maps.coverage" NAME="saliency_maps Coverage Results" MODIFIED="1576758327886" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CNNAI$keras.coverage" NAME="keras Coverage Results" MODIFIED="1576154036988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CNNAI$optimizer.coverage" NAME="optimizer Coverage Results" MODIFIED="1574964270507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/downloads/keras-vis/vis" />
     <SUITE FILE_PATH="coverage/CNNAI$grad_cam.coverage" NAME="grad_cam Coverage Results" MODIFIED="1576150552988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/CNNAI$main.coverage" NAME="main Coverage Results" MODIFIED="1578582360146" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CNNAI$main.coverage" NAME="main Coverage Results" MODIFIED="1580307810506" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
