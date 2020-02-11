@@ -35,6 +35,6 @@ Keras-vis 0.4.1
 
 
 ## Example of terminal command to run the code:
-python3 cnn-vis.py saliency data/my_model.h5 --data data/my_image_data.pkl --layer output --images 0 3 5 10
+python3 cnn-vis.py saliency my_model.h5 --data my_image_data.pkl --layer output --images 0 3 5 10
 
 
