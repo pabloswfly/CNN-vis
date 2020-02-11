@@ -18,9 +18,9 @@ Backpropagation modifier | -bm or --backprop | Modifier for the backpropagation 
 ## Functions
 - **activation-max:** Convolutional filter visualization via Activation Maximization technique ([Dumitru Erhan et al.](https://pdfs.semanticscholar.org/65d9/94fb778a8d9e0f632659fb33a082949a50d3.pdf)). This method is used to get an insight into what input motifs activate a particular filter. When applied in the final Dense layer, it's possible to visualize which is the input image that the ConvNet expects in order to maximize a certain output class.
 
-- **saliency:** Attention visualization technique with discriminative behavior based on estimating the gradient of an output category with respect to the input image. ([Karen Simonyan et al.](https://arxiv.org/abs/1312.6034)). These attention maps help to visualize which regions of the input image draw the most attention from the ConvNet model.
+- **saliency:** Saliency map is an attention visualization technique with discriminative behavior based on estimating the gradient of an output category with respect to the input image. ([Karen Simonyan et al.](https://arxiv.org/abs/1312.6034)). These attention maps help to visualize which regions of the input image draw the most attention from the ConvNet model.
 
-- **grad-cam** Attention visualization technique with discriminative behavior based on estimating the gradient of an output category with respect to the input image. ([Ramprasaath R. Selvaraju et al.](https://arxiv.org/abs/1610.02391)). It differs with the saliency maps in the sense that it uses the output of the previous Conv layer before the specified one.
+- **grad-cam** Gradient Class Activation map or Grad-CAM is an attention visualization technique with discriminative behavior based on estimating the gradient of an output category with respect to the input image. ([Ramprasaath R. Selvaraju et al.](https://arxiv.org/abs/1610.02391)). It differs with the saliency maps in the sense that it uses the output of the previous Conv layer before the specified one.
 
 - **filter-weights:** Visualization of the learned weights from all the filters in the provided Conv layer.
 
