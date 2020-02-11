@@ -1,5 +1,5 @@
 # CNN-vis
-CNN-vis is a flexible Python software which is executable from the command line. Its main purpose is to visualize why a Convolutional Neural Network (CNN) is doing what it does. At the moment, four main visualizations are supported: Convolutional Kernel visualization, Activation Maximization technique, Saliency maps and Gradient Class Activation Maps (Grad-CAM), from the [Keras-vis library] of Github user Raghakot (https://raghakot.github.io/keras-vis/), along with other small utilities.
+CNN-vis is a flexible Python software which is executable from the command line. Its main purpose is to visualize why a Convolutional Neural Network (CNN) is doing what it does. At the moment, four main visualizations are supported: Convolutional Kernel visualization, Activation Maximization technique, Saliency maps and Gradient Class Activation Maps (Grad-CAM), from the [Keras-vis library] (https://raghakot.github.io/keras-vis/) of Github user Raghakot, along with other small utilities.
 
 This software was developed for my Bioinformatics project of 7.5 ECTS with Fernando Racimo's group, at the Univeristy of Copenhagen, with title 'Understanding a CNN to predict Adaptive Introgression'.
 
