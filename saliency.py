@@ -100,24 +100,23 @@ def average_saliency(model, images, labels, layer_name='output', backprop_mod = 
 
     n_im_AI = labels.count('AI')
     n_im_noAI = labels.count('-')
-    print(n_im_AI)
-    print(n_im_noAI)
+    print(f'Number of images with AI: {n_im_AI}')
+    print(f'Number of images with no AI: {n_im_noAI}')
+    print(images.shape)
 
     # Find index in model for the desired layer
     layer = utils.find_layer_idx(model, layer_name)
 
     AIdict = {}
-    AIdict['AI'] = np.zeros((68,32))
-    AIdict['-'] = np.zeros((68,32))
+    AIdict['AI'] = np.zeros((images.shape[1], images.shape[2]))
+    AIdict['-'] = np.zeros((images.shape[1], images.shape[2]))
 
     counter = 0
 
     # For each of the input images
-    for im, lab in zip(images, labels):
+    for i, (im, lab) in enumerate(zip(images, labels)):
 
-        counter += 1
-        print(counter)
-
+        print(i)
 
         # Calculates the saliency gradient using keras-vis library.
         grads = visualize_saliency(model, layer, filter_indices=0, seed_input=im,

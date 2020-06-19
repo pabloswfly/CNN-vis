@@ -1,5 +1,6 @@
 import os
 import warnings
+import numpy as np
 with warnings.catch_warnings():
     warnings.filterwarnings('ignore')
 
@@ -63,6 +64,9 @@ if __name__ == "__main__":
         # Y.shape = (100,)
         with open(args.data, "rb") as file:
             X, Y = pickle.load(file)
+            if len(X.shape) == 3:
+                X = np.expand_dims(X, axis=-1)
+                print(f'X shape is: {X.shape}')
 
         if args.images:
             # Separate data in matrix X with picture index, and labels vector y with y={0 --> -, 1 --> AI}
@@ -113,4 +117,4 @@ if __name__ == "__main__":
 
 
 # Example of terminal command to run the code:
-# python3 cnn-vis.py -f grad-cam -m data/AI_scenario_32x32_3-Conv2d-x16-f4x4_pad-valid_1-bins_1576838882.h5 -d data/test_data_32x32.pkl -l output -im 0 1 2 5 10 18 19 31 51 72
+# python3 cnn-vis.py average-saliency data/NEW_cnn_1562604956.hdf5 -d data/genmat.pkl -l output -im 0 1 2 5 10 18 19 31 51 72
