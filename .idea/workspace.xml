@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="048062d3-66c0-4e41-aab0-9049dea1eaa8" name="Default Changelist" comment="Code state at time of handing the report">
-      <change afterPath="$PROJECT_DIR$/.idea/CNNVIS.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/NEW_cnn_1562604956.hdf5" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/NEW_cnn_2372196339.hdf5" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/NEW_cnn_3759615666.hdf5" afterDir="false" />
@@ -15,17 +14,14 @@
       <change afterPath="$PROJECT_DIR$/results/diff_saliency_AI_16.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/results/diff_saliency_AI_32.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/results/difference_AI16.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CNNAI.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cnn-vis.py" beforeDir="false" afterPath="$PROJECT_DIR$/cnn-vis.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/results/actmax_guided.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/actmax_guided.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/results/average_saliency_output_guided100.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/average_saliency_output_guided100.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/results/average_saliency_output_guided16.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/results/average_saliency_output_guided32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/difference_AI.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/difference_AI.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/results/difference_AI32.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/results/gradcam_output_guided.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/gradcam_output_guided.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saliency.py" beforeDir="false" afterPath="$PROJECT_DIR$/saliency.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -202,8 +198,8 @@
       <item itemvalue="Python.grad_cam" />
       <item itemvalue="Python.main" />
       <item itemvalue="Python.mnist_test" />
-      <item itemvalue="Python.rapido" />
       <item itemvalue="Python.saliency_maps" />
+      <item itemvalue="Python.rapido" />
     </list>
     <recent_temporary>
       <list>
@@ -267,7 +263,7 @@
       <workItem from="1580893528176" duration="7430000" />
       <workItem from="1581187536549" duration="2796000" />
       <workItem from="1581427340005" duration="989000" />
-      <workItem from="1592566425325" duration="6479000" />
+      <workItem from="1592566425325" duration="6809000" />
     </task>
     <task id="LOCAL-00001" summary="Code state at time of handing the report">
       <created>1579534619837</created>
@@ -283,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580924056833</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Code state at time of handing the report">
+      <created>1592575345708</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1592575345708</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
