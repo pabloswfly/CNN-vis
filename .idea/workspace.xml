@@ -1,27 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="048062d3-66c0-4e41-aab0-9049dea1eaa8" name="Default Changelist" comment="Code state at time of handing the report">
-      <change afterPath="$PROJECT_DIR$/data/NEW_cnn_1562604956.hdf5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/NEW_cnn_2372196339.hdf5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/NEW_cnn_3759615666.hdf5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/genmat.pkl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/zarrcache_256-rows_subset.tar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rapido.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/average_saliency_output_guided.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/average_saliency_output_guided_16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/average_saliency_output_guided_32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/diff_saliency_AI_16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/diff_saliency_AI_32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/difference_AI16.png" afterDir="false" />
+    <list default="true" id="048062d3-66c0-4e41-aab0-9049dea1eaa8" name="Default Changelist" comment="Fixed variable image size bug and added variable tensor dimensions.">
+      <change afterPath="$PROJECT_DIR$/results/average_gradcam_output_guided_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/average_gradcam_output_guided_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/average_saliency_output_guided_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/gradcam_output_guided_AI.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/gradcam_output_guided_AI2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/gradcam_output_guided_noAI.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/gradcam_output_guided_noAI2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/graham_cnn_1562604956/cnn_1562604956_actmax_guided.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/graham_cnn_1562604956/cnn_1562604956_average_saliency_output_guided.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/graham_cnn_1562604956/cnn_1562604956_difference_AI.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/graham_cnn_1562604956/cnn_1562604956_gradcam_output_guided_AI.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/graham_cnn_1562604956/cnn_1562604956_gradcam_output_guided_AI2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/graham_cnn_1562604956/cnn_1562604956_gradcam_output_guided_noAI.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/graham_cnn_1562604956/cnn_1562604956_gradcam_output_guided_noAI2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/graham_cnn_1562604956/cnn_1562604956_saliency_output_guided_AI.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/graham_cnn_1562604956/cnn_1562604956_saliency_output_guided_AI2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/graham_cnn_1562604956/cnn_1562604956_saliency_output_guided_noAI.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/graham_cnn_1562604956/cnn_1562604956_saliency_output_guided_noAI2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/graham_cnn_2372196339/cnn_2372196339_actmax_guided.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/graham_cnn_2372196339/cnn_2372196339_average_saliency_output_guided.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/graham_cnn_2372196339/cnn_2372196339_difference_AI.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/graham_cnn_2372196339/cnn_2372196339_gradcam_output_guided_AI.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/graham_cnn_2372196339/cnn_2372196339_gradcam_output_guided_AI2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/graham_cnn_2372196339/cnn_2372196339_gradcam_output_guided_noAI.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/graham_cnn_2372196339/cnn_2372196339_gradcam_output_guided_noAI2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/graham_cnn_2372196339/cnn_2372196339_saliency_output_guided_AI.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/graham_cnn_2372196339/cnn_2372196339_saliency_output_guided_AI2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/graham_cnn_2372196339/cnn_2372196339_saliency_output_guided_noAI.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/graham_cnn_2372196339/cnn_2372196339_saliency_output_guided_noAI2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/saliency_output_guided_AI.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/saliency_output_guided_AI2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/saliency_output_guided_noAI.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/saliency_output_guided_noAI2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/activation_max.py" beforeDir="false" afterPath="$PROJECT_DIR$/activation_max.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cnn-vis.py" beforeDir="false" afterPath="$PROJECT_DIR$/cnn-vis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grad_cam.py" beforeDir="false" afterPath="$PROJECT_DIR$/grad_cam.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/results/actmax_guided.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/actmax_guided.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/average_saliency_output_guided100.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/average_saliency_output_guided100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/average_saliency_output_guided16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/average_saliency_output_guided32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/average_gradcam_output_guided.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/average_saliency_output_guided.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/average_saliency_output_guided.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/results/difference_AI.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/difference_AI.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/difference_AI32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/gradcam_output_guided.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/gradcam_output_guided.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/gradcam_output_guided.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saliency.py" beforeDir="false" afterPath="$PROJECT_DIR$/saliency.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +86,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../genomatnn-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
@@ -198,8 +221,8 @@
       <item itemvalue="Python.grad_cam" />
       <item itemvalue="Python.main" />
       <item itemvalue="Python.mnist_test" />
-      <item itemvalue="Python.saliency_maps" />
       <item itemvalue="Python.rapido" />
+      <item itemvalue="Python.saliency_maps" />
     </list>
     <recent_temporary>
       <list>
@@ -263,7 +286,11 @@
       <workItem from="1580893528176" duration="7430000" />
       <workItem from="1581187536549" duration="2796000" />
       <workItem from="1581427340005" duration="989000" />
-      <workItem from="1592566425325" duration="6809000" />
+      <workItem from="1592566425325" duration="10841000" />
+      <workItem from="1592737962392" duration="138000" />
+      <workItem from="1592812765012" duration="10954000" />
+      <workItem from="1593692046347" duration="56000" />
+      <workItem from="1599684140224" duration="282000" />
     </task>
     <task id="LOCAL-00001" summary="Code state at time of handing the report">
       <created>1579534619837</created>
@@ -286,7 +313,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592575345708</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Fixed variable image size bug and added variable tensor dimensions.">
+      <created>1592575710144</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1592575710144</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -326,7 +360,8 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <MESSAGE value="Code state at time of handing the report" />
-    <option name="LAST_COMMIT_MESSAGE" value="Code state at time of handing the report" />
+    <MESSAGE value="Fixed variable image size bug and added variable tensor dimensions." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed variable image size bug and added variable tensor dimensions." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CNNAI$mnist_test.coverage" NAME="mnist_test Coverage Results" MODIFIED="1578579914921" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

@@ -66,10 +66,10 @@ def plot_gradCAM(model, images_withidx, layer_name='output', backprop_mod = 'gui
     # Find index in model for the desired layer
     layer = utils.find_layer_idx(model, layer_name)
 
-    fig = plt.figure(figsize=(16, 8))
+    fig = plt.figure(figsize=(24, 8))
     grid = ImageGrid(fig, 111, nrows_ncols=(2, n_im), axes_pad=0.15,
                      share_all=True, cbar_location="right", cbar_mode="single",
-                     cbar_size="7%", cbar_pad=0.15)
+                     cbar_size="4%", cbar_pad=0.15)
 
     # For each of the input images
     for i, im in enumerate(images):
@@ -103,8 +103,8 @@ def plot_gradCAM(model, images_withidx, layer_name='output', backprop_mod = 'gui
 
     # Graphical parameters
     grid[-1].cax.colorbar(plot_cam)
-    grid[0].set_yticks([3, 35, 67])
-    grid[0].set_yticklabels(['Neandertal', 'European', 'African'])
+    #grid[0].set_yticks([3, 35, 67])
+    #grid[0].set_yticklabels(['Neandertal', 'European', 'African'])
     plt.suptitle('grad-CAM map for layer {0} with backprop_modifier: {1}'.format(layer_name, backprop_mod))
     plt.savefig('results/gradcam_{0}_{1}.png'.format(layer_name, backprop_mod))
 
@@ -128,19 +128,16 @@ def average_gradcam(model, images, labels, layer_name='output', backprop_mod = '
     layer = utils.find_layer_idx(model, layer_name)
 
     # Now switch to a more OO interface to exercise more features.
-    fig, axs = plt.subplots(nrows=1, ncols=2, sharex=True)
+    fig, axs = plt.subplots(figsize=(10, 5), nrows=1, ncols=2, sharex=True)
 
     AIdict = {}
-    AIdict['AI'] = np.zeros((68,32))
-    AIdict['-'] = np.zeros((68,32))
-
-    counter = 0
+    AIdict['AI'] = np.zeros((images.shape[1], images.shape[2]))
+    AIdict['-'] = np.zeros((images.shape[1], images.shape[2]))
 
     # For each of the input images
-    for im, lab in zip(images, labels):
+    for i, (im, lab) in enumerate(zip(images, labels)):
 
-        counter += 1
-        print(counter)
+        print(i)
 
         # Calculates the saliency gradient using keras-vis library.
         grads = visualize_cam(model, layer, filter_indices=0, seed_input=im,
@@ -162,14 +159,14 @@ def average_gradcam(model, images, labels, layer_name='output', backprop_mod = '
     ax = axs[0]
     ax.imshow(AIdict['AI'], cmap='viridis')
     ax.set_title('AI (%d ims)' % n_im_AI)
-    ax.set_yticks([3, 35, 67])
-    ax.set_yticklabels(['Neandertal', 'European', 'African'])
+    #ax.set_yticks([3, 35, 67])
+    #ax.set_yticklabels(['Neandertal', 'European', 'African'])
 
     ax = axs[1]
     pic = ax.imshow(AIdict['-'], cmap='viridis')
     ax.set_title('no-AI (%d ims)' % n_im_noAI)
 
-    fig.colorbar(pic, ax=ax)
+    fig.colorbar(pic, ax=axs, shrink=0.5)
     fig.suptitle('Average of Grad-CAM for layer {0} with backprop_modifier: {1}'.format(layer_name, backprop_mod))
     plt.savefig('results/average_gradcam_{0}_{1}.png'.format(layer_name, backprop_mod))
 

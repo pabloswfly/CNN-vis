@@ -52,10 +52,10 @@ def plot_saliency(model, images_withidx, layer_name='output', backprop_mod = 'gu
     # Find index in model for the desired layer
     layer = utils.find_layer_idx(model, layer_name)
 
-    fig = plt.figure(figsize=(16, 8))
+    fig = plt.figure(figsize=(24, 8))
     grid = ImageGrid(fig, 111, nrows_ncols=(2, n_im), axes_pad=0.15,
                      share_all=True, cbar_location="right", cbar_mode="single",
-                     cbar_size="7%", cbar_pad=0.15)
+                     cbar_size="4%", cbar_pad=0.15)
 
 
     # For each of the input images
@@ -82,8 +82,8 @@ def plot_saliency(model, images_withidx, layer_name='output', backprop_mod = 'gu
 
     # Graphical parameters
     grid[-1].cax.colorbar(plot_sal)
-    grid[0].set_yticks([3, 35, 67])
-    grid[0].set_yticklabels(['Neandertal', 'European', 'African'])
+    #grid[0].set_yticks([3, 35, 67])
+    #grid[0].set_yticklabels(['Neandertal', 'European', 'African'])
     plt.suptitle('Saliency map for layer {0} with backprop_modifier: {1}'.format(layer_name, backprop_mod))
     plt.savefig('results/saliency_{0}_{1}.png'.format(layer_name, backprop_mod))
 
@@ -102,7 +102,6 @@ def average_saliency(model, images, labels, layer_name='output', backprop_mod = 
     n_im_noAI = labels.count('-')
     print(f'Number of images with AI: {n_im_AI}')
     print(f'Number of images with no AI: {n_im_noAI}')
-    print(images.shape)
 
     # Find index in model for the desired layer
     layer = utils.find_layer_idx(model, layer_name)
@@ -111,12 +110,10 @@ def average_saliency(model, images, labels, layer_name='output', backprop_mod = 
     AIdict['AI'] = np.zeros((images.shape[1], images.shape[2]))
     AIdict['-'] = np.zeros((images.shape[1], images.shape[2]))
 
-    counter = 0
-
     # For each of the input images
     for i, (im, lab) in enumerate(zip(images, labels)):
 
-        print(i)
+        print(f'processing image {i}')
 
         # Calculates the saliency gradient using keras-vis library.
         grads = visualize_saliency(model, layer, filter_indices=0, seed_input=im,
@@ -137,31 +134,31 @@ def average_saliency(model, images, labels, layer_name='output', backprop_mod = 
     # Difference
     diff = AIdict['AI'] - AIdict['-']
 
-    fig, ax = plt.subplots(figsize=(6, 7))
-    pic = ax.imshow(diff, cmap='hot', vmin=-0.3, vmax=0.3)
-    ax.set_yticks([3, 35, 67])
-    ax.set_yticklabels(['Neandertal', 'European', 'African'])
-    fig.colorbar(pic)
+    fig, ax = plt.subplots(figsize=(10, 7))
+    pic = ax.imshow(diff, cmap='hot', vmin=-0.1, vmax=0.1)
+    #ax.set_yticks([3, 35, 67])
+    #ax.set_yticklabels(['Neandertal', 'European', 'African'])
+    fig.colorbar(pic, ax=ax)
     fig.suptitle('Difference of average saliency maps for AI and no-AI class')
     plt.savefig('results/difference_AI.png'.format(layer_name, backprop_mod))
     plt.clf()
 
 
     # Now switch to a more OO interface to exercise more features.
-    fig, axs = plt.subplots(nrows=1, ncols=2, sharex=True)
+    fig, axs = plt.subplots(figsize=(12, 7), nrows=1, ncols=2, sharex=True)
 
     # Graphical parameters
     ax = axs[0]
-    ax.imshow(AIdict['AI'], cmap='hot', vmin=0., vmax=0.4)
+    ax.imshow(AIdict['AI'], cmap='hot', vmin=0, vmax=0.2)
     ax.set_title('AI (%d ims)' % n_im_AI)
-    ax.set_yticks([3, 35, 67])
-    ax.set_yticklabels(['Neandertal', 'European', 'African'])
+    #ax.set_yticks([3, 35, 67])
+    #ax.set_yticklabels(['Neandertal', 'European', 'African'])
 
     ax = axs[1]
-    pic = ax.imshow(AIdict['-'], cmap='hot', vmin=0., vmax=0.4)
+    pic = ax.imshow(AIdict['-'], cmap='hot', vmin=0, vmax=0.2)
     ax.set_title('no-AI (%d ims)' % n_im_noAI)
 
-    fig.colorbar(pic, ax=ax)
+    fig.colorbar(pic, ax=axs, shrink=0.5)
     fig.suptitle('Average of Saliency maps for layer {0} with backprop_modifier: {1}'.format(layer_name, backprop_mod))
     plt.savefig('results/average_saliency_{0}_{1}.png'.format(layer_name, backprop_mod))
 

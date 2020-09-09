@@ -82,7 +82,7 @@ def plot_actmax(model, tv_weight=1e-5, backprop_mod=None):
         - tv_weight: Total variance weight loss. Needs to be tuned to get accurate layer filters."""
 
     fig = plt.figure(figsize=(16, 8))
-    grid = ImageGrid(fig, 111, nrows_ncols=(1, 4), axes_pad=0.15, share_all=True)
+    grid = ImageGrid(fig, 111, nrows_ncols=(2, 4), axes_pad=(0.15, 0.30), share_all=True)
 
     i = 0
 
@@ -106,8 +106,8 @@ def plot_actmax(model, tv_weight=1e-5, backprop_mod=None):
 
         # Graphical parameters
         grid[i].set_title('{}'.format(layer.name))
-        grid[0].set_yticks([3, 35, 67])
-        grid[0].set_yticklabels(['Neandertal', 'European', 'African'])
+        #grid[0].set_yticks([3, 35, 67])
+        #grid[0].set_yticklabels(['Neandertal', 'European', 'African'])
 
         i += 1
 

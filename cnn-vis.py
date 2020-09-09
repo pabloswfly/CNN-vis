@@ -81,18 +81,20 @@ if __name__ == "__main__":
     if not os.path.exists('results'):
         os.makedirs('results')
 
+# 0 4 6 10 41 - 0
+# 5 11 22 37 78 - 1
 # ---------------------------------------------------------------------------------------------------------------------
 
     # Saliency maps
     if args.function == 'saliency' and args.data and args.images and args.layer:
-            plot_saliency(model, images_withidx, layer_name=layer_name, backprop_mod=args.backprop)
+            plot_saliency(model, images_withidx, layer_name=layer_name, backprop_mod=args.backprop, labels = labs2)
 
     elif args.function == 'average-saliency' and args.data and args.layer:
             average_saliency(model, X, labels=label_to_AI(Y), layer_name=layer_name, backprop_mod=args.backprop)
 
     # Gradient-Class Activation Maps
     elif args.function == 'grad-cam' and args.data and args.images and args.layer:
-            plot_gradCAM(model, images_withidx, layer_name=layer_name, backprop_mod=args.backprop)
+            plot_gradCAM(model, images_withidx, layer_name=layer_name, backprop_mod=args.backprop, labels = labs2)
 
     elif args.function == 'average-gradcam' and args.data and args.layer:
         average_gradcam(model, X, labels=label_to_AI(Y), layer_name=layer_name, backprop_mod=args.backprop)
