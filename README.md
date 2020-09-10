@@ -1,5 +1,5 @@
 # CNN-vis
-CNN-vis is a flexible Python software which is executable from the command line. Its main purpose is to visualize why a Convolutional Neural Network (CNN) is doing what it does. At the moment, four main visualizations are supported: Convolutional Kernel visualization, Activation Maximization technique, Saliency maps and Gradient Class Activation Maps (Grad-CAM), from the [Keras-vis library](https://raghakot.github.io/keras-vis/) of Github user Raghakot, along with other small utilities.
+CNN-vis was developed to visualize why a Convolutional Neural Network (CNN) which performs binary classification is doing what it does. The program is optimized to run on genotype matrices from population data. At the moment, four main visualizations are supported: Convolutional Kernel visualization, Activation Maximization technique, Saliency maps and Gradient Class Activation Maps (Grad-CAM), from the [Keras-vis library](https://raghakot.github.io/keras-vis/) of Github user Raghakot, along with other small utilities.
 
 This software was developed for my Bioinformatics project of 7.5 ECTS with Fernando Racimo's group, at the Univeristy of Copenhagen, with title 'Understanding a CNN to predict Adaptive Introgression'.
 
@@ -20,7 +20,11 @@ Backpropagation modifier | -bm or --backprop | Modifier for the backpropagation 
 
 - **saliency:** Saliency map is an attention visualization technique with discriminative behavior based on estimating the gradient of an output category with respect to the input image. ([Karen Simonyan et al.](https://arxiv.org/abs/1312.6034)). These attention maps help to visualize which regions of the input image draw the most attention from the ConvNet model.
 
+- **average-saliency:** Plot the average saliency map over all input data for both classes separately, as well as a map of the saliency difference between the two average maps.
+
 - **grad-cam** Gradient Class Activation map or Grad-CAM is an attention visualization technique with discriminative behavior based on estimating the gradient of an output category with respect to the input image. ([Ramprasaath R. Selvaraju et al.](https://arxiv.org/abs/1610.02391)). It differs with the saliency maps in the sense that it uses the output of the previous Conv layer before the specified one.
+
+- **average-gradcam:** Plot the average gradCAM map over all input data for both classes separately.
 
 - **filter-weights:** Visualization of the learned weights from all the filters in the provided Conv layer.
 
