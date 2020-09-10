@@ -1,5 +1,5 @@
 # CNN-vis
-CNN-vis was developed to visualize why a Convolutional Neural Network (CNN) which performs binary classification is doing what it does. The program is optimized to run on genotype matrices from population data. At the moment, four main visualizations are supported: Convolutional Kernel visualization, Activation Maximization technique, Saliency maps and Gradient Class Activation Maps (Grad-CAM), from the [Keras-vis library](https://raghakot.github.io/keras-vis/) of Github user Raghakot, along with other small utilities.
+CNN-vis was developed to visualize and understand how a Convolutional Neural Network (CNN) which performs binary classification between two classes works under the hood. The program is optimized to run on genotype matrices from population data. At the moment, four main visualizations are supported: Convolutional Kernel visualization, Activation Maximization technique, Saliency maps and Gradient Class Activation Maps (Grad-CAM), from the [Keras-vis library](https://raghakot.github.io/keras-vis/) of Github user Raghakot, along with other small utilities.
 
 This software was developed for my Bioinformatics project of 7.5 ECTS with Fernando Racimo's group, at the Univeristy of Copenhagen, with title 'Understanding a CNN to predict Adaptive Introgression'.
 
