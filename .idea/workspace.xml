@@ -5,6 +5,17 @@
       <change afterPath="$PROJECT_DIR$/results/average_gradcam_output_guided_1.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/results/average_gradcam_output_guided_2.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/results/average_saliency_output_guided_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/cnn_2372196339_actmax_guided.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/cnn_2372196339_average_saliency_output_guided.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/cnn_2372196339_difference_AI.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/cnn_2372196339_gradcam_output_guided_AI.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/cnn_2372196339_gradcam_output_guided_AI2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/cnn_2372196339_gradcam_output_guided_noAI.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/cnn_2372196339_gradcam_output_guided_noAI2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/cnn_2372196339_saliency_output_guided_AI.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/cnn_2372196339_saliency_output_guided_AI2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/cnn_2372196339_saliency_output_guided_noAI.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/cnn_2372196339_saliency_output_guided_noAI2.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/results/gradcam_output_guided_AI.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/results/gradcam_output_guided_AI2.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/results/gradcam_output_guided_noAI.png" afterDir="false" />
@@ -31,10 +42,14 @@
       <change afterPath="$PROJECT_DIR$/results/graham_cnn_2372196339/cnn_2372196339_saliency_output_guided_AI2.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/results/graham_cnn_2372196339/cnn_2372196339_saliency_output_guided_noAI.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/results/graham_cnn_2372196339/cnn_2372196339_saliency_output_guided_noAI2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/saliency_output_deconv.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/saliency_output_guided.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/results/saliency_output_guided_AI.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/results/saliency_output_guided_AI2.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/results/saliency_output_guided_noAI.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/results/saliency_output_guided_noAI2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/saliency_output_rectified.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/saliency_output_relu.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/activation_max.py" beforeDir="false" afterPath="$PROJECT_DIR$/activation_max.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cnn-vis.py" beforeDir="false" afterPath="$PROJECT_DIR$/cnn-vis.py" afterDir="false" />
@@ -221,8 +236,8 @@
       <item itemvalue="Python.grad_cam" />
       <item itemvalue="Python.main" />
       <item itemvalue="Python.mnist_test" />
-      <item itemvalue="Python.rapido" />
       <item itemvalue="Python.saliency_maps" />
+      <item itemvalue="Python.rapido" />
     </list>
     <recent_temporary>
       <list>
@@ -290,7 +305,8 @@
       <workItem from="1592737962392" duration="138000" />
       <workItem from="1592812765012" duration="10954000" />
       <workItem from="1593692046347" duration="56000" />
-      <workItem from="1599684140224" duration="282000" />
+      <workItem from="1599684140224" duration="976000" />
+      <workItem from="1599723806664" duration="2000000" />
     </task>
     <task id="LOCAL-00001" summary="Code state at time of handing the report">
       <created>1579534619837</created>
@@ -320,7 +336,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592575710144</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fixed variable image size bug and added variable tensor dimensions.">
+      <created>1599684577343</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1599684577343</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

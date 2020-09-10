@@ -28,8 +28,8 @@ if __name__ == "__main__":
     parser.add_argument('function', help='Type of map to visualize or utility function',
                         choices=['saliency', 'average-saliency', 'average-gradcam', 'grad-cam', 'activation-max',
                                  'filter-weights', 'model-summary', 'get-labels'], type=str)
-    parser.add_argument('model', help='.pkl file with the Convolutional Neural Network model to be analized', type=str)
-    parser.add_argument('-d', '--data', help='.pkl file with labelled images that were used to train the CNN', type=str)
+    parser.add_argument('model', help='.pkl file with the Convolutional Neural Network model to be analyzed', type=str)
+    parser.add_argument('-d', '--data', help='.pkl file with labelled input data that was used to train the CNN', type=str)
     parser.add_argument('-im', '--images', help='Selected images to use for saliency maps or grad-CAM maps', nargs='+', type=int)
     parser.add_argument('-l', '--layer', help='Convolutional layer from model to plot', default='output', type=str)
     parser.add_argument('-bm', '--backprop', help='Backpropagation modifier', default='guided',
@@ -41,7 +41,7 @@ if __name__ == "__main__":
     layer_name = args.layer
 
 
-    # loading the model
+    # Loading the model
     model = load_model(args.model, custom_objects={"tf": tf}, compile=False)
     model.compile(optimizer='adam',
                   loss='binary_crossentropy',
@@ -50,7 +50,7 @@ if __name__ == "__main__":
 
     # I need to swap the last dense layer activation function to a linear one, because
     # the model uses a sigmoid function to predict the binary class. (similar to softmax)
-    # Softmax activation function gives a suboptimal result in keras-vis documentation.
+    # Softmax activation function gives a suboptimal result as explained in keras-vis documentation.
     model = swap_function_to_linear(model, "output")
     #model = swap_function_to_linear(model, "preds")
 
@@ -64,6 +64,8 @@ if __name__ == "__main__":
         # Y.shape = (100,)
         with open(args.data, "rb") as file:
             X, Y = pickle.load(file)
+
+            # Add the channel dimension if missing from the input data
             if len(X.shape) == 3:
                 X = np.expand_dims(X, axis=-1)
                 print(f'X shape is: {X.shape}')
@@ -81,8 +83,6 @@ if __name__ == "__main__":
     if not os.path.exists('results'):
         os.makedirs('results')
 
-# 0 4 6 10 41 - 0
-# 5 11 22 37 78 - 1
 # ---------------------------------------------------------------------------------------------------------------------
 
     # Saliency maps

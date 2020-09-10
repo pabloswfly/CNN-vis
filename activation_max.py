@@ -1,5 +1,6 @@
 import sys
 
+# I installed keras-vis manually because at the time the pip version had some bugs.
 sys.path.insert(0,'/home/pabswfly/keras-vis' )
 
 import numpy as np
@@ -16,7 +17,7 @@ from vis.visualization import visualize_activation
 
 
 def visualize_images(images, labels=None):
-    """Plot a set of pictures given as input. If also label vector is given, this
+    """Plot a set of pictures from the input data. If also a label vector is given, this
     function uses them as a tag for each picture"""
 
     fig = plt.figure(figsize=(8,4))
@@ -26,9 +27,9 @@ def visualize_images(images, labels=None):
 
     # Plot each of the pictures
     for i, im in enumerate(images):
-
         plot = grid[i].imshow(np.squeeze(im))
 
+        # Add the picture labels if given
         if labels:
             grid[i].set_title(labels[i])
 
@@ -67,7 +68,7 @@ def plot_weights(model, layer_name):
     # Plot each filter in the layer
     for i, filter in enumerate(W):
 
-        #TODO: Make subplot flexible, not only [4, 4]
+        #TODO: Make subplot flexible, not only for 16 filters in a grid of [4, 4]
         plt.subplot(4, 4, i + 1)
         plt.imshow(filter, cmap='Blues')
 
@@ -84,10 +85,8 @@ def plot_actmax(model, tv_weight=1e-5, backprop_mod=None):
     fig = plt.figure(figsize=(16, 8))
     grid = ImageGrid(fig, 111, nrows_ncols=(2, 4), axes_pad=(0.15, 0.30), share_all=True)
 
-    i = 0
-
     # summarize filter shapes
-    for layer in model.layers:
+    for i, layer in enumerate(model.layers):
 
         # check for convolutional layer
         if 'conv' not in layer.name:
@@ -108,8 +107,6 @@ def plot_actmax(model, tv_weight=1e-5, backprop_mod=None):
         grid[i].set_title('{}'.format(layer.name))
         #grid[0].set_yticks([3, 35, 67])
         #grid[0].set_yticklabels(['Neandertal', 'European', 'African'])
-
-        i += 1
 
 
     # If no backpropagation modifier is given, the default one is called Vanilla

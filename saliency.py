@@ -1,5 +1,6 @@
 import sys
 
+# I installed keras-vis manually because at the time the pip version had some bugs.
 sys.path.insert(0,'/home/pabswfly/keras-vis' )
 
 import numpy as np
@@ -10,7 +11,7 @@ import matplotlib.pyplot as plt
 
 
 def visualize_images(images, labels=None):
-    """Plot a set of pictures given as input. If also label vector is given, this
+    """Plot a set of pictures from the input data. If also a label vector is given, this
     function uses them as a tag for each picture"""
 
     fig = plt.figure(figsize=(8,4))
@@ -20,9 +21,9 @@ def visualize_images(images, labels=None):
 
     # Plot each of the pictures
     for i, im in enumerate(images):
-
         plot = grid[i].imshow(np.squeeze(im))
 
+        # Add the picture labels if given
         if labels:
             grid[i].set_title(labels[i])
 
@@ -65,7 +66,7 @@ def plot_saliency(model, images_withidx, layer_name='output', backprop_mod = 'gu
         grads = visualize_saliency(model, layer, filter_indices=0, seed_input=im,
                                    backprop_modifier=backprop_mod, grad_modifier= grad_mod)
 
-        # Overlay the heatmap and the original image to obtain the map.
+        # Plot input picture in the first row and the respective saliency map below.
         plot_im = grid[i].imshow(np.squeeze(im), cmap='Blues')
         plot_sal = grid[i+n_im].imshow(grads, cmap='hot')
 
@@ -98,6 +99,7 @@ def average_saliency(model, images, labels, layer_name='output', backprop_mod = 
             - grad_mod: Gradient modifier. Ex: 'absolute', 'negate'.
             - labels: A list of labels y. If given, it is used as title for each of the subfigures plotted"""
 
+    # Count number of pictures labelled as AI and no-AI (-).
     n_im_AI = labels.count('AI')
     n_im_noAI = labels.count('-')
     print(f'Number of images with AI: {n_im_AI}')
@@ -106,6 +108,7 @@ def average_saliency(model, images, labels, layer_name='output', backprop_mod = 
     # Find index in model for the desired layer
     layer = utils.find_layer_idx(model, layer_name)
 
+    # Initialize empty variables
     AIdict = {}
     AIdict['AI'] = np.zeros((images.shape[1], images.shape[2]))
     AIdict['-'] = np.zeros((images.shape[1], images.shape[2]))
@@ -119,6 +122,7 @@ def average_saliency(model, images, labels, layer_name='output', backprop_mod = 
         grads = visualize_saliency(model, layer, filter_indices=0, seed_input=im,
                                    backprop_modifier=backprop_mod, grad_modifier=grad_mod)
 
+        # Add it to the respective labelled class
         AIdict[lab] = AIdict[lab] + grads
 
 
@@ -127,13 +131,14 @@ def average_saliency(model, images, labels, layer_name='output', backprop_mod = 
     if backprop_mod == None:
         backprop_mod = 'Vanilla'
 
-    # Average calculation
+    # Average calculation for each class
     AIdict['AI'] = AIdict['AI']/n_im_AI
     AIdict['-'] = AIdict['-'] / n_im_noAI
 
-    # Difference
+    # Difference between average saliency for each class
     diff = AIdict['AI'] - AIdict['-']
 
+    # Plotting the difference in saliency map
     fig, ax = plt.subplots(figsize=(10, 7))
     pic = ax.imshow(diff, cmap='hot', vmin=-0.1, vmax=0.1)
     #ax.set_yticks([3, 35, 67])
@@ -143,11 +148,9 @@ def average_saliency(model, images, labels, layer_name='output', backprop_mod = 
     plt.savefig('results/difference_AI.png'.format(layer_name, backprop_mod))
     plt.clf()
 
-
-    # Now switch to a more OO interface to exercise more features.
+    # Plotting the two average saliency maps for each class respectively
     fig, axs = plt.subplots(figsize=(12, 7), nrows=1, ncols=2, sharex=True)
 
-    # Graphical parameters
     ax = axs[0]
     ax.imshow(AIdict['AI'], cmap='hot', vmin=0, vmax=0.2)
     ax.set_title('AI (%d ims)' % n_im_AI)

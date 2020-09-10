@@ -1,5 +1,6 @@
 import sys
 
+# I installed keras-vis manually because at the time the pip version had some bugs.
 sys.path.insert(0,'/home/pabswfly/keras-vis' )
 
 import numpy as np
@@ -12,7 +13,7 @@ import matplotlib.cm as cm
 
 
 def visualize_images(images, labels=None):
-    """Plot a set of pictures given as input. If also label vector is given, this
+    """Plot a set of pictures from the input data. If also a label vector is given, this
     function uses them as a tag for each picture"""
 
     fig = plt.figure(figsize=(8,4))
@@ -22,9 +23,9 @@ def visualize_images(images, labels=None):
 
     # Plot each of the pictures
     for i, im in enumerate(images):
-
         plot = grid[i].imshow(np.squeeze(im))
 
+        # Add the picture labels if given
         if labels:
             grid[i].set_title(labels[i])
 
@@ -87,7 +88,7 @@ def plot_gradCAM(model, images_withidx, layer_name='output', backprop_mod = 'gui
             jet_heatmap = jet_grads[..., idx]
             overlay_img = overlay(overlay_img, jet_heatmap)
 
-        # Plot input picture in the first figure row and the respective CAM beneath.
+        # Plot input picture in the first row and the respective CAM below.
         plot_im = grid[i].imshow(np.squeeze(im), cmap='Blues')
         plot_cam = grid[i + n_im].imshow(overlay_img, cmap='viridis')
 
@@ -119,6 +120,7 @@ def average_gradcam(model, images, labels, layer_name='output', backprop_mod = '
             - grad_mod: Gradient modifier. Ex: 'absolute', 'negate'.
             - labels: A list of labels y. If given, it is used as title for each of the subfigures plotted"""
 
+    # Count number of pictures labelled as AI and no-AI (-).
     n_im_AI = labels.count('AI')
     n_im_noAI = labels.count('-')
     print(n_im_AI)
@@ -127,9 +129,9 @@ def average_gradcam(model, images, labels, layer_name='output', backprop_mod = '
     # Find index in model for the desired layer
     layer = utils.find_layer_idx(model, layer_name)
 
-    # Now switch to a more OO interface to exercise more features.
     fig, axs = plt.subplots(figsize=(10, 5), nrows=1, ncols=2, sharex=True)
 
+    # Initialize empty variables
     AIdict = {}
     AIdict['AI'] = np.zeros((images.shape[1], images.shape[2]))
     AIdict['-'] = np.zeros((images.shape[1], images.shape[2]))
@@ -137,12 +139,13 @@ def average_gradcam(model, images, labels, layer_name='output', backprop_mod = '
     # For each of the input images
     for i, (im, lab) in enumerate(zip(images, labels)):
 
-        print(i)
+        print(f'processing image {i}')
 
         # Calculates the saliency gradient using keras-vis library.
         grads = visualize_cam(model, layer, filter_indices=0, seed_input=im,
                                    backprop_modifier=backprop_mod, grad_modifier=grad_mod)
 
+        # Add it to the respective labelled class
         AIdict[lab] = AIdict[lab] + grads
 
 
