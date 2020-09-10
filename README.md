@@ -7,7 +7,7 @@ Manual to run CNN-vis from the console:
 
 Operation | Flag | Comments | Required | Type
 ------------ | ------------- | ------------- | -------------  | -------------
-Function | function | Visualization technique or utility to perform. Choices are: *activation-max*, *saliency*, *grad-cam*, *filter-weights*, *model-summary*, or *get-labels* | Yes | String
+Function | function | Visualization technique or utility to perform. Choices are: *activation-max*, *saliency*, *average-saliency*, *grad-cam*, *average-gradcam*, *filter-weights*, *model-summary*, or *get-labels* | Yes | String
 ConvNet model | model | Path to model file, stored as a .h5 Python format | Yes | String
 Data | -d or --data | Path to data containing image matrices X and labels y as a pickle package in .pkl format | No | String
 Layer | -l or --layer | Name of the desired Conv layer in the ConvNet model to visualize | No | String
